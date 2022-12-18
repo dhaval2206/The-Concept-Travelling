@@ -1,0 +1,43 @@
+@import './../index.scss';
+.nav-back {
+    background-color: $back-80;
+}
+.banner-image {
+    height: auto;
+    width: 200px;
+}
+
+.nav-bar-item {
+    color: $primary !important;
+}
+.nav-bar-item.nav-link.active{
+    color : $font !important;
+}
+.nav-bar-item:hover {
+    color: $secondary !important;
+}
+.navbar-toggler {
+    border-color: $primary-50 !important;
+}
+.navbar-toggler-icon {
+   background-image:url("data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 30 30%27%3e%3cpath stroke=%27rgba(215, 181, 109,0.5)%27 stroke-linecap=%27round%27 stroke-miterlimit=%2710%27 stroke-width=%272%27 d=%27M4 7h22M4 15h22M4 23h22%27/%3e%3c/svg%3e") !important;
+}
+.navbar-spacing {
+    margin-left: 25% ;
+}
+.offcanvas-body-style {
+    background-color: $back !important;
+}
+.offcanvas-header {
+    background-color: $back !important;
+}
+.offcanvas-header .btn-close {
+    color: $primary;
+}
+.btn-close 
+{
+    background : transparent url("data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 16 16%27 fill=%27rgba(215, 181, 109,0.5)%27%3e%3cpath d=%27M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z%27/%3e%3c/svg%3e") center/1em auto no-repeat !important;
+}
+.offcanvas.offcanvas-start {
+    background-color: $back-80 !important;
+}

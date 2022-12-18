@@ -1,0 +1,114 @@
+@import './../../index.scss';
+.custom-carousel {
+    height: 100vh;
+}
+
+.custom-carousel-caption {
+    background-color: $back-70;
+    margin: 15%;
+    padding: 100px;
+}
+.carousel-header {
+    font-size: xx-large;
+}
+.carousel-animation {
+    color: $primary;
+    animation: carousel-entry 1s linear 0s 1;
+    -webkit-animation:carousel-entry 1s linear 0s 1;
+}
+@-webkit-keyframes carousel-entry {
+    0% {opacity: 0;}
+    60% {opacity: 0;} 
+    100% {opacity: 0.8;}
+}
+@keyframes carousel-entry {
+    0% {opacity: 0;}
+    60% {opacity: 0;} 
+    100% {opacity: 0.8;}
+}
+.section-header {
+    color: $primary;
+    font-size: 24pt;
+}
+.section-text {
+    color: $secondary;
+}
+.col-section {
+    background-color: $default-30;
+    padding: 30px;
+    margin-left: 0%;
+}
+.row-section {
+    display: flex;
+}
+.even-row {
+    background: $primary;
+}
+.image-container{
+    border: 25px solid $default;
+    background-color:  $default;
+    margin:5px;
+    text-align: center;
+    color: $font;
+    height: 95%;
+}
+.image-gallery {
+    position: inherit;
+    height: 80%;
+    width: 100%;
+}
+.image-caption {
+    padding-top: 10%;
+    vertical-align: middle;
+    //background-color: $font;
+    //border: 5px solid $font;
+    font-size: 16pt;
+    font-weight: bolder;
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.testimonial-carousel {
+        width: 100%;
+        margin: 0 !important;
+        padding: 0 !important;
+}
+.testimonial-carousel-caption {
+    position: relative;
+    vertical-align: middle;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+    border: 2px dashed $primary;
+    margin: 20px;
+    width: 68%;
+    border-radius: 40px;
+    border-bottom-right-radius: 0px;
+    height: auto;
+}
+.testimonial-carousel-header {
+    text-align: right;
+    width: 100%;
+    padding-right: 50px;
+    
+}
+.testimonial-carousel-image {
+    height: 20vh;
+    margin: 0;
+    padding: 0;
+}
+.testimonial-carousel-item {
+    width: 100%;
+}
+.footer-row {
+    background-color: $default;
+    color: $font;
+}
+
+.footer-list-item {
+    background : $default !important;
+    color: $font;
+    border: none;
+}
