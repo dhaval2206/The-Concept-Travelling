@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.css": "/The-Concept-Travelling/static/css/main.e171117d.css",
+    "main.js": "/The-Concept-Travelling/static/js/main.a22ad6f6.js",
+    "static/js/787.c1cd1284.chunk.js": "/The-Concept-Travelling/static/js/787.c1cd1284.chunk.js",
+    "static/media/COR1.webp": "/The-Concept-Travelling/static/media/COR1.64d489039f168b3cad11.webp",
+    "static/media/COR2.webp": "/The-Concept-Travelling/static/media/COR2.e08b68709bd03cbad770.webp",
+    "static/media/COR4.webp": "/The-Concept-Travelling/static/media/COR4.52f574f7aabe69c8803e.webp",
+    "static/media/BASE_PNG.png": "/The-Concept-Travelling/static/media/BASE_PNG.207783a5ffdf7d65f914.png",
+    "static/media/WITHOUT_PIN.png": "/The-Concept-Travelling/static/media/WITHOUT_PIN.da6ed6228be485d30621.png",
+    "static/media/LaBelleAurore-Regular.ttf": "/The-Concept-Travelling/static/media/LaBelleAurore-Regular.bc43b15661f3e942b3f6.ttf",
+    "static/media/AFRICA_HOME.webp": "/The-Concept-Travelling/static/media/AFRICA_HOME.10c1edd6eb3f56c06b06.webp",
+    "static/media/ASIA_HOME.webp": "/The-Concept-Travelling/static/media/ASIA_HOME.f3a2b346e5c793107b23.webp",
+    "static/media/NORTH_AMERICA_HOME.webp": "/The-Concept-Travelling/static/media/NORTH_AMERICA_HOME.634ee3ec4568397c7c7d.webp",
+    "static/media/MIDDLE_EAST_AND_NORTH_AFRICA_HOME.webp": "/The-Concept-Travelling/static/media/MIDDLE_EAST_AND_NORTH_AFRICA_HOME.81beb6072a3cb980b00f.webp",
+    "static/media/EUROPE_HOME.webp": "/The-Concept-Travelling/static/media/EUROPE_HOME.fb5b04301db3d83dc8cb.webp",
+    "static/media/INDIAN_SUBCONTINENT_HOME.webp": "/The-Concept-Travelling/static/media/INDIAN_SUBCONTINENT_HOME.a0f3b5f93fe35ad069d8.webp",
+    "static/media/COR3.webp": "/The-Concept-Travelling/static/media/COR3.221610b8e275e13e89eb.webp",
+    "static/media/AUSTRALIA_HOME.webp": "/The-Concept-Travelling/static/media/AUSTRALIA_HOME.91bbf432db37dae9c1de.webp",
+    "static/media/CENTRAL_AMERICA_HOME.webp": "/The-Concept-Travelling/static/media/CENTRAL_AMERICA_HOME.1c39dd517049a1b7f245.webp",
+    "static/media/PIN.png": "/The-Concept-Travelling/static/media/PIN.e1da36aff601f8bef145.png",
+    "static/media/logo.svg": "/The-Concept-Travelling/static/media/logo.1e007d7db624431ec6e4f725e78bc146.svg",
+    "static/media/BLACK_BACK.webp": "/The-Concept-Travelling/static/media/BLACK_BACK.9935d7253a4f372685b4.webp",
+    "index.html": "/The-Concept-Travelling/index.html",
+    "main.e171117d.css.map": "/The-Concept-Travelling/static/css/main.e171117d.css.map",
+    "main.a22ad6f6.js.map": "/The-Concept-Travelling/static/js/main.a22ad6f6.js.map",
+    "787.c1cd1284.chunk.js.map": "/The-Concept-Travelling/static/js/787.c1cd1284.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e171117d.css",
+    "static/js/main.a22ad6f6.js"
+  ]
+}
