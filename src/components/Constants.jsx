@@ -17,6 +17,15 @@ import middleEastAndNorthAfricaWebp from '../assets/images/MIDDLE_EAST_AND_NORTH
 import northAmericaWebp from '../assets/images/NORTH_AMERICA_HOME.webp';
 import blackBackWebp from '../assets/images/BLACK_BACK.webp';
 
+import africaJpg from '../assets/images/AFRICA_HOME.jpg';
+import asiaJpg from '../assets/images/ASIA_HOME.jpg';
+import australiaJpg from '../assets/images/AUSTRALIA_HOME.jpg';
+import centralAmericaJpg from '../assets/images/CENTRAL_AMERICA_HOME.jpg';
+import europeJpg from '../assets/images/EUROPE_HOME.jpg';
+import indianSubcontinentJpg from '../assets/images/INDIAN_SUBCONTINENT_HOME.jpg';
+import middleEastAndNorthAfricaJpg from '../assets/images/MIDDLE_EAST_AND_NORTH_AFRICA_HOME.jpg';
+import northAmericaJpg from '../assets/images/NORTH_AMERICA_HOME.jpg';
+
 export const Constants = {
     LOGO : logoSvg,
     BASE : basePng,
@@ -38,4 +47,15 @@ export const Constants = {
             MIDDLE_EAST_AND_NORTH_AFRICA : middleEastAndNorthAfricaWebp,
             NORTH_AMERICA : northAmericaWebp
     }
+}
+
+export const COUNTRY_IMAGE_MAP = {
+    AFRICA : africaJpg,
+    ASIA : asiaJpg,
+    AUSTRALIA : australiaJpg,
+    CENTRAL_AMERICA : centralAmericaJpg,
+    EUROPE : europeJpg,
+    INDIAN_SUBCONTINENT : indianSubcontinentJpg,
+    MIDDLE_EAST_AND_NORTH_AFRICA : middleEastAndNorthAfricaJpg,
+    NORTH_AMERICA : northAmericaJpg
 }

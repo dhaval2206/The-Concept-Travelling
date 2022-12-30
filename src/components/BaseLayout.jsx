@@ -20,6 +20,9 @@ const BaseLayout = {
                     <Offcanvas.Body>
                         <Nav className="justify-content-end .d-none .d-sm-block flex-grow-1 pe-3 navbar-spacing">
                             <Nav.Link className="nav-bar-item" href="#home">Home</Nav.Link>
+                            <Nav.Link className="nav-bar-item" href="#country">
+                             
+                            </Nav.Link>
                             <Nav.Link className="nav-bar-item" href="#features">Features</Nav.Link>
                             <Nav.Link className="nav-bar-item" href="#pricing">Pricing</Nav.Link>
                         </Nav>

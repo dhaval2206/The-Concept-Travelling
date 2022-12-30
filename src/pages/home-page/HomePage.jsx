@@ -77,20 +77,20 @@ const HomePage = () => {
     ]};
     return (<>
         <Carousel slide={true} fade={true} keyboard={true} touch={true} translate="yes" className="">
-            {carouselArray.map((item) => {
+            {carouselArray.map((item,index) => {
                     return (
-                        <Carousel.Item className="justify-content-center">
-                            <Carousel.Caption className="custom-carousel-caption carousel-animation align-self-center">
+                        <Carousel.Item key={"carousel_item_"+index} className="justify-content-center">
+                            <Carousel.Caption key={"carousel_caption_"+index} className="custom-carousel-caption carousel-animation align-self-center">
                                 <h3 className="carousel-animation carousel-header stylish-font">{item.captionHeader}</h3>
                                 <p className="carousel-animation">{item.captionContent}</p>
                             </Carousel.Caption>
-                            <Image className={item.className} alt={item.alt} src={item.src}  />
+                            <Image key={"carousel_image_"+index} className={item.className} alt={item.alt} src={item.src}  />
                         </Carousel.Item>
                     );
                 })}
         </Carousel>
         {/* <!-- CONTENT - START --> */}
-        <Container fluid>
+        <Container fluid="true">
             <Row>
                 <Col>
                     <h3 className="text-center section-header pt-5 pb-5 stylish-font">Why book with The Concept Travelling?</h3>
@@ -117,19 +117,19 @@ const HomePage = () => {
                 </Col>
             </Row>
             <hr className="section-header mt-5 mb-5" />
-            <Row className="even-row mt-5" fluid>
+            <Row className="even-row mt-5" fluid="true">
                 <Col className="mt-5">
                     <h3 className="text-center pt-5 pb-5 stylish-font">Choose your Destinations</h3>
                 </Col>
             </Row>
             <Row className="d-flex justify-content-start even-row pb-5">
                         {
-                            figureArray.map((item)=> {
+                            figureArray.map((item,index)=> {
                                 return (
                                     <>
                                         <Col sm={12} md={6} lg={6} xl={3} xxl={3}>
                                             <div className="image-container" title={item.caption}>
-                                                <Image 
+                                                <Image key={"figure_image_"+index}
                                                     className="image-gallery"
                                                     width={400}
                                                     height={300}
@@ -151,14 +151,14 @@ const HomePage = () => {
                     </Col>
             </Row>
             <Carousel slide={true} indicators={false} fade={true} keyboard={true} controls={false} touch={true} translate="yes" className="testimonial-carousel">
-                {testimonialsArray.map((item) => {
+                {testimonialsArray.map((item,index) => {
                     return (
-                        <Carousel.Item className="justify-content-center testimonial-carousel-item">
-                            <Carousel.Caption className="testimonial-carousel-caption carousel-animation align-self-center">
+                        <Carousel.Item key={"testimonial_item_"+index} className="justify-content-center testimonial-carousel-item">
+                            <Carousel.Caption key={"testimonial_caption_"+index} className="testimonial-carousel-caption carousel-animation align-self-center">
                                 <h3 className="carousel-animation">{item.captionContent}</h3>
                                 <h5 className="float-right testimonial-carousel-header stylish-font">{item.captionHeader}</h5>
                             </Carousel.Caption>
-                            <Image className={item.className} alt={item.alt} src={item.src}  />
+                            <Image  key={"testimonial_image_"+index} className={item.className} alt={item.alt} src={item.src}  />
                         </Carousel.Item>
                     );
                 })}
@@ -167,32 +167,32 @@ const HomePage = () => {
                 <Col className="mt-5" sm={12} md={6} lg={6} xl={3} xxl={3}>
                     <h4>USEFUL INFORMATION</h4>
                     <ListGroup className="footer-list">
-                        { footerArray.col1.map((item) => {
-                            return (<ListGroup.Item className="footer-list-item">{item.label}</ListGroup.Item>)
+                        { footerArray.col1.map((item,index) => {
+                            return (<ListGroup.Item key={"col1_"+index} className="footer-list-item">{item.label}</ListGroup.Item>)
                         }) }
                     </ListGroup>
                 </Col>
                 <Col className="mt-5" sm={12} md={6} lg={6} xl={3} xxl={3}>
                     <h4>USEFUL INFORMATION</h4>
                     <ListGroup className="footer-list">
-                        { footerArray.col1.map((item) => {
-                            return (<ListGroup.Item className="footer-list-item">{item.label}</ListGroup.Item>)
+                        { footerArray.col1.map((item,index) => {
+                            return (<ListGroup.Item key={"col2_"+index} className="footer-list-item">{item.label}</ListGroup.Item>)
                         }) }
                     </ListGroup>
                 </Col>
                 <Col className="mt-5" sm={12} md={6} lg={6} xl={3} xxl={3}>
                     <h4>USEFUL INFORMATION</h4>
                     <ListGroup className="footer-list">
-                        { footerArray.col1.map((item) => {
-                            return (<ListGroup.Item className="footer-list-item">{item.label}</ListGroup.Item>)
+                        { footerArray.col1.map((item,index) => {
+                            return (<ListGroup.Item key={"col3_"+index} className="footer-list-item">{item.label}</ListGroup.Item>)
                         }) }
                     </ListGroup>
                 </Col>
                 <Col className="mt-5" sm={12} md={6} lg={6} xl={3} xxl={3}>
                     <h4>USEFUL INFORMATION</h4>
                     <ListGroup className="footer-list">
-                        { footerArray.col1.map((item) => {
-                            return (<ListGroup.Item className="footer-list-item">{item.label}</ListGroup.Item>)
+                        { footerArray.col1.map((item,index) => {
+                            return (<ListGroup.Item key={"col4_"+index} className="footer-list-item">{item.label}</ListGroup.Item>)
                         }) }
                     </ListGroup>
                 </Col>

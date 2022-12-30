@@ -1,15 +1,17 @@
 @import './../../index.scss';
 .custom-carousel {
     height: 100vh;
+    vertical-align: middle;
+    margin: auto !important;
 }
 
 .custom-carousel-caption {
     background-color: $back-70;
-    margin: 15%;
-    padding: 100px;
+    padding: 5%;
+    margin-bottom: 30vh;
 }
 .carousel-header {
-    font-size: xx-large;
+    font-size: x-large;
 }
 .carousel-animation {
     color: $primary;

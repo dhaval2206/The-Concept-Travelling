@@ -1,0 +1,28 @@
+@import '../../index.scss';
+@import '../home-page/home-page.scss';
+
+.country-back-image {
+  height: 500px !important;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.country-image-container {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    vertical-align: middle;
+    align-items: center;
+}
+.country-image-caption {
+    color: $primary;
+    position: absolute;
+    text-align: center;
+    background:$back-80;
+    padding: 50px;
+    padding-left: 100px;
+    padding-right: 100px;
+    align-self: flex-end;
+}
