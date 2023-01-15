@@ -3,6 +3,7 @@ import { Constants } from "./Constants";
 import Nav from 'react-bootstrap/Nav';
 import './base-layout.scss'
 import { Container, Image, Navbar, Offcanvas } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 const BaseLayout = {
     getNavigationBar : () => {
@@ -21,7 +22,7 @@ const BaseLayout = {
                         <Nav className="justify-content-end .d-none .d-sm-block flex-grow-1 pe-3 navbar-spacing">
                             <Nav.Link className="nav-bar-item" href="#home">Home</Nav.Link>
                             <Nav.Link className="nav-bar-item" href="#country">
-                             
+                                <Link to="/country/india">Country</Link>
                             </Nav.Link>
                             <Nav.Link className="nav-bar-item" href="#features">Features</Nav.Link>
                             <Nav.Link className="nav-bar-item" href="#pricing">Pricing</Nav.Link>
