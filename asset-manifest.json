@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/The-Concept-Travelling/static/css/main.38aaefaa.css",
-    "main.js": "/The-Concept-Travelling/static/js/main.354dc78c.js",
+    "main.js": "/The-Concept-Travelling/static/js/main.26c3eab1.js",
     "static/js/787.c1cd1284.chunk.js": "/The-Concept-Travelling/static/js/787.c1cd1284.chunk.js",
     "static/media/AFRICA_HOME.jpg": "/The-Concept-Travelling/static/media/AFRICA_HOME.04e7596454df9f17ca8d.jpg",
     "static/media/NORTH_AMERICA_HOME.jpg": "/The-Concept-Travelling/static/media/NORTH_AMERICA_HOME.be24c56e2e9c3f7617e0.jpg",
@@ -31,11 +31,11 @@
     "static/media/BLACK_BACK.webp": "/The-Concept-Travelling/static/media/BLACK_BACK.9935d7253a4f372685b4.webp",
     "index.html": "/The-Concept-Travelling/index.html",
     "main.38aaefaa.css.map": "/The-Concept-Travelling/static/css/main.38aaefaa.css.map",
-    "main.354dc78c.js.map": "/The-Concept-Travelling/static/js/main.354dc78c.js.map",
+    "main.26c3eab1.js.map": "/The-Concept-Travelling/static/js/main.26c3eab1.js.map",
     "787.c1cd1284.chunk.js.map": "/The-Concept-Travelling/static/js/787.c1cd1284.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.38aaefaa.css",
-    "static/js/main.354dc78c.js"
+    "static/js/main.26c3eab1.js"
   ]
 }
