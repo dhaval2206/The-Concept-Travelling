@@ -1,7 +1,9 @@
 import React, { useEffect } from "react";
-import { Container, Image } from "react-bootstrap";
+import { Col, Container, Image, Row } from "react-bootstrap";
 import { useParams,useNavigate } from "react-router";
+import { CommonUtils } from "../../components/CommonUtils";
 import { COUNTRY_IMAGE_MAP } from "../../components/Constants";
+import { COUNTRY_CONSTANT } from "../../components/CountryConstants";
 import './country-page.scss'
 
 const countryList = [
@@ -15,6 +17,8 @@ const countryList = [
     "sri-lanka","india","bhutan","nepal","middle-east-&-north-africa","turkey","oman","jordan","iran","israel","united-arab-emirates",
     "egypt","morocco"
 ];
+const destinationList = CommonUtils.getKeyValuesFromArrayUnderCaps(COUNTRY_CONSTANT,"DESTINATION");
+debugger;
 const CountryPage = () => {
     const params = useParams();
     const navigator = useNavigate();
@@ -22,8 +26,8 @@ const CountryPage = () => {
         if(!searchCountry) {
             return "";
         }
-        return countryList.find((item) => (item === searchCountry.trim().toLowerCase().replaceAll(" ","-"))) ? 
-        countryList.find((item) => (item === searchCountry.trim().toLowerCase().replaceAll(" ","-"))).toUpperCase() : "";
+        return destinationList.find((item) => (item === searchCountry.trim().toUpperCase().replaceAll(" ","-"))) ? 
+        destinationList.find((item) => (item === searchCountry.trim().toUpperCase().replaceAll(" ","-"))).toUpperCase() : "";
     }
     useEffect(() => {
         if(params && params.countryName) {
@@ -36,9 +40,19 @@ const CountryPage = () => {
     return (
     <>
         <Container fluid="true" className="country-image-container">
-            <Image className="country-back-image" fluid="true" src={COUNTRY_IMAGE_MAP[fetchCountry(params.countryName) ? fetchCountry(params.countryName).toUpperCase() : ""]}>
+            <Image className="country-back-image" fluid="true" src={COUNTRY_IMAGE_MAP[fetchCountry(params.countryName) ? fetchCountry(params.countryName).toUpperCase() : ""] ?? COUNTRY_IMAGE_MAP.ASIA}>
             </Image>
             <h2 className="country-image-caption stylish-font">{fetchCountry(params.countryName)}</h2>
+        </Container>
+        <Container fluid="true">
+            <Row className="d-flex justify-content-evenly">
+                <Col className="col-section" sm={12} md={12} lg={12} xl={12} xxl={12}>
+                    <h3 className="stylish-font section-header pt-1 pb-1"> </h3>
+                    <p className="section-text">
+                    { CommonUtils.searchKeyValuesFromArrayUnderCaps(COUNTRY_CONSTANT,"DESTINATION",fetchCountry(params.countryName)).DESCRIPTION }
+                    </p>
+                </Col>
+            </Row>
         </Container>
     </>);
 }
