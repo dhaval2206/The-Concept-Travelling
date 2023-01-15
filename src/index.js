@@ -6,11 +6,12 @@ import BaseLayout from './components/BaseLayout';
 import HomePage from './pages/home-page/HomePage'
 import {Route, Routes,Navigate, HashRouter } from 'react-router-dom';
 import CountryPage from './pages/country-page/CountryPage';
+import BaseNavigationBar from './components/BaseNavigationBar';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <HashRouter basename='/'>
-    {BaseLayout.getNavigationBar()}
+      <BaseNavigationBar></BaseNavigationBar>
       <Routes>
         <Route path='/country/:countryName' element={<CountryPage/>}></Route>
         <Route path='/country/' element={<CountryPage/>}></Route>
