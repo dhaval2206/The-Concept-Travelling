@@ -1,5 +1,5 @@
+import { Card, Col, Image, Row } from "antd";
 import React, { useEffect } from "react";
-import { Col, Container, Image, Row } from "react-bootstrap";
 import { useParams,useNavigate } from "react-router";
 import { CommonUtils } from "../../components/CommonUtils";
 import { COUNTRY_IMAGE_MAP } from "../../components/Constants";
@@ -27,12 +27,12 @@ const CountryPage = () => {
     
     return (
     <>
-        <Container fluid="true" className="country-image-container">
+        <Card fluid="true" className="country-image-container">
             <Image className="country-back-image" fluid="true" src={COUNTRY_IMAGE_MAP[fetchCountry(params.countryName) ? fetchCountry(params.countryName).toUpperCase() : ""] ?? COUNTRY_IMAGE_MAP.ASIA}>
             </Image>
             <h2 className="country-image-caption stylish-font">{fetchCountry(params.countryName)}</h2>
-        </Container>
-        <Container fluid="true">
+        </Card>
+        <Card fluid="true">
             <Row className="d-flex justify-content-evenly">
                 <Col className="col-section" sm={12} md={12} lg={12} xl={12} xxl={12}>
                     <div className="section-text destination-text">
@@ -43,7 +43,7 @@ const CountryPage = () => {
                     </div>
                 </Col>
             </Row>
-        </Container>
+        </Card>
     </>);
 }
 

@@ -1,5 +1,5 @@
+import { Card, Carousel, Col, Image, List, Row } from "antd";
 import React from "react";
-import { Carousel, Col, Container, Image, ListGroup, Row } from "react-bootstrap";
 import { Constants } from "../../components/Constants";
 import './home-page.scss'
 
@@ -79,18 +79,18 @@ const HomePage = () => {
         <Carousel slide={true} fade={true} keyboard={true} touch={true} translate="yes" className="">
             {carouselArray.map((item,index) => {
                     return (
-                        <Carousel.Item key={"carousel_item_"+index} className="justify-content-center">
-                            <Carousel.Caption key={"carousel_caption_"+index} className="custom-carousel-caption carousel-animation align-self-center">
+                        <div key={"carousel_item_"+index} className="justify-content-center">
+                            <div key={"carousel_caption_"+index} className="custom-carousel-caption carousel-animation align-self-center">
                                 <h3 className="carousel-animation carousel-header stylish-font">{item.captionHeader}</h3>
                                 <p className="carousel-animation">{item.captionContent}</p>
-                            </Carousel.Caption>
+                            </div>
                             <Image key={"carousel_image_"+index} className={item.className} alt={item.alt} src={item.src}  />
-                        </Carousel.Item>
+                        </div>
                     );
                 })}
         </Carousel>
         {/* <!-- CONTENT - START --> */}
-        <Container fluid="true">
+        <Card fluid="true">
             <Row>
                 <Col>
                     <h3 className="text-center section-header pt-5 pb-5 stylish-font">Why book with The Concept Travelling?</h3>
@@ -153,52 +153,52 @@ const HomePage = () => {
             <Carousel slide={true} indicators={false} fade={true} keyboard={true} controls={false} touch={true} translate="yes" className="testimonial-carousel">
                 {testimonialsArray.map((item,index) => {
                     return (
-                        <Carousel.Item key={"testimonial_item_"+index} className="justify-content-center testimonial-carousel-item">
-                            <Carousel.Caption key={"testimonial_caption_"+index} className="testimonial-carousel-caption carousel-animation align-self-center">
+                        <div key={"testimonial_item_"+index} className="justify-content-center testimonial-carousel-item">
+                            <div key={"testimonial_caption_"+index} className="testimonial-carousel-caption carousel-animation align-self-center">
                                 <h3 className="carousel-animation">{item.captionContent}</h3>
                                 <h5 className="float-right testimonial-carousel-header stylish-font">{item.captionHeader}</h5>
-                            </Carousel.Caption>
+                            </div>
                             <Image  key={"testimonial_image_"+index} className={item.className} alt={item.alt} src={item.src}  />
-                        </Carousel.Item>
+                        </div>
                     );
                 })}
             </Carousel>
             <Row className="d-flex justify-content-evenly footer-row">
                 <Col className="mt-5" sm={12} md={6} lg={6} xl={3} xxl={3}>
                     <h4>USEFUL INFORMATION</h4>
-                    <ListGroup className="footer-list">
+                    <List className="footer-list">
                         { footerArray.col1.map((item,index) => {
-                            return (<ListGroup.Item key={"col1_"+index} className="footer-list-item">{item.label}</ListGroup.Item>)
+                            return (<List.Item key={"col1_"+index} className="footer-list-item">{item.label}</List.Item>)
                         }) }
-                    </ListGroup>
+                    </List>
                 </Col>
                 <Col className="mt-5" sm={12} md={6} lg={6} xl={3} xxl={3}>
                     <h4>USEFUL INFORMATION</h4>
-                    <ListGroup className="footer-list">
+                    <List className="footer-list">
                         { footerArray.col1.map((item,index) => {
-                            return (<ListGroup.Item key={"col2_"+index} className="footer-list-item">{item.label}</ListGroup.Item>)
+                            return (<List.Item key={"col2_"+index} className="footer-list-item">{item.label}</List.Item>)
                         }) }
-                    </ListGroup>
+                    </List>
                 </Col>
                 <Col className="mt-5" sm={12} md={6} lg={6} xl={3} xxl={3}>
                     <h4>USEFUL INFORMATION</h4>
-                    <ListGroup className="footer-list">
+                    <List className="footer-list">
                         { footerArray.col1.map((item,index) => {
-                            return (<ListGroup.Item key={"col3_"+index} className="footer-list-item">{item.label}</ListGroup.Item>)
+                            return (<List.Item key={"col3_"+index} className="footer-list-item">{item.label}</List.Item>)
                         }) }
-                    </ListGroup>
+                    </List>
                 </Col>
                 <Col className="mt-5" sm={12} md={6} lg={6} xl={3} xxl={3}>
                     <h4>USEFUL INFORMATION</h4>
-                    <ListGroup className="footer-list">
+                    <List className="footer-list">
                         { footerArray.col1.map((item,index) => {
-                            return (<ListGroup.Item key={"col4_"+index} className="footer-list-item">{item.label}</ListGroup.Item>)
+                            return (<List.Item key={"col4_"+index} className="footer-list-item">{item.label}</List.Item>)
                         }) }
-                    </ListGroup>
+                    </List>
                 </Col>
                 
             </Row>
-        </Container>
+        </Card>
         {/* <!-- CONTENT - END --> */}
     </>);
 }

@@ -1,14 +1,9 @@
-import React, { useState,useEffect } from "react";
+import React, { useState } from "react";
 import { Constants } from "./Constants";
-import Nav from 'react-bootstrap/Nav';
 import './base-layout.scss'
-import $ from 'jquery/dist/jquery'
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.min.js';
-import { Button, Container, Image, Navbar, Offcanvas, OverlayTrigger, Tooltip } from "react-bootstrap";
 import { CommonUtils } from "./CommonUtils";
 import { COUNTRY_CONSTANT } from "./CountryConstants";
-import { ReactDOM } from "react";
+import { Card, Image, Menu, Tooltip } from "antd";
 
 function LinkWithTooltip({ id, children, href, tooltip }) {
     const [showTooltip,setShowTooltip] = useState(false);
@@ -16,13 +11,13 @@ function LinkWithTooltip({ id, children, href, tooltip }) {
         setShowTooltip(!showTooltip);
     }
     return (
-      <OverlayTrigger
+      <Card
         overlay={<Tooltip positionTop="200px" id={id}>{tooltip}</Tooltip>}
         placement="bottom"
         show={showTooltip}
       >
         <a href={href} onClick={toggleToolTip}>{children}</a>
-      </OverlayTrigger>
+      </Card>
     );
   }
 const destinationList = CommonUtils.getKeyValuesFromArrayUnderCaps(COUNTRY_CONSTANT,"DESTINATION");
@@ -32,24 +27,24 @@ const BaseNavigationBar = () => {
         setShowContent(showContent==="show-content"?"hide-content":"show-content");
     }
     const getCountrySpan = () => {
-        return (<Container>
+        return (<Card>
             
-        </Container>);
+        </Card>);
     }
 
-    useEffect(() => {
-        $(document).ready(function(){
-            $(".nav-back").css("background" , "rgba(15,15,15,0.7)");
-            $(window).scroll(function(){
-                var scroll = $(window).scrollTop();
-                if (scroll <= 1000) {
-                    $(".nav-back").css("background" , "rgba(15,15,15,"+((scroll/1000)+0.7)+")");
-                } else {
-                    $(".nav-back").css("background" , "rgba(15,15,15,"+1+")");
-                }
-            })
-        })
-    }, [])
+    // useEffect(() => {
+    //     $(document).ready(function(){
+    //         $(".nav-back").css("background" , "rgba(15,15,15,0.7)");
+    //         $(window).scroll(function(){
+    //             var scroll = $(window).scrollTop();
+    //             if (scroll <= 1000) {
+    //                 $(".nav-back").css("background" , "rgba(15,15,15,"+((scroll/1000)+0.7)+")");
+    //             } else {
+    //                 $(".nav-back").css("background" , "rgba(15,15,15,"+1+")");
+    //             }
+    //         })
+    //     })
+    // }, [])
 
     const getStartNavSection = () => {
 
@@ -110,9 +105,9 @@ const BaseNavigationBar = () => {
 
             </Navbar> */}
     
-        <nav className="navbar navbar-expand-lg fixed-top nav-back nav-back py-3 shadow-sm">
+        <Menu className="navbar navbar-expand-lg fixed-top nav-back nav-back py-3 shadow-sm">
             <div className="container-fluid">
-                <a href="#" className="navbar-brand font-weight-bold d-block"><Image fluid={false} className="banner-image" src={Constants.BASE}></Image></a>
+                <a href="#" className="navbar-brand font-weight-bold d-block"><Image fluid={"false"} className="banner-image" src={Constants.BASE}></Image></a>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
@@ -149,7 +144,7 @@ const BaseNavigationBar = () => {
                     </ul>
                 </div>
             </div>
-        </nav>
+        </Menu>
        
         </>
     );
