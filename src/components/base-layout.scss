@@ -1,6 +1,6 @@
 @import './../index.scss';
 .nav-back {
-    background-color: $back-80;
+    // background-color: $back-80 !important;
 }
 .banner-image {
     height: auto;
@@ -9,6 +9,17 @@
 
 .nav-bar-item {
     color: $primary !important;
+}
+
+.nav-bar-item a {
+    color: $primary !important;
+    text-decoration: none;
+}
+li {
+    list-style-type: none;
+}
+.nav-item {
+    width: auto !important;
 }
 .nav-bar-item.nav-link.active{
     color : $font !important;
@@ -67,3 +78,54 @@
     color: $font;
     border: none;
 }
+.megamenu {
+    position: static;
+  }
+  
+.megamenu .dropdown-menu {
+    // background: none;
+    // border: none;
+    width: 100%;
+  }
+  .text-uppercase {
+    letter-spacing: 0.08em;
+  }
+  .megaimaga
+  {
+    background: center center url("https://therichpost.com/wp-content/uploads/2021/11/mega.png")no-repeat; background-size: cover;
+  }
+  .mega-menu-container {
+    width: 80vh !important;
+    overflow: auto;
+  }
+
+  .black-back {
+    background: $back !important;
+  }
+
+  .black-back-70 {
+    background: $back !important;
+  }
+  .no-back {
+    background: transparent !important;
+  }
+
+  .custom-nav-scroll{
+    overflow: auto;
+    height: 500px;
+  }
+
+
+
+  .custom-nav-scroll::-webkit-scrollbar {
+    width: 1em;
+  }
+   
+  .custom-nav-scroll::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  }
+   
+  .custom-nav-scroll::-webkit-scrollbar-thumb {
+    background-color: $primary-70;
+    outline: 1px solid $primary-70;
+  }

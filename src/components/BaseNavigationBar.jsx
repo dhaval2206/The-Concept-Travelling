@@ -1,10 +1,14 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import { Constants } from "./Constants";
 import Nav from 'react-bootstrap/Nav';
 import './base-layout.scss'
+import $ from 'jquery/dist/jquery'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.min.js';
 import { Button, Container, Image, Navbar, Offcanvas, OverlayTrigger, Tooltip } from "react-bootstrap";
 import { CommonUtils } from "./CommonUtils";
 import { COUNTRY_CONSTANT } from "./CountryConstants";
+import { ReactDOM } from "react";
 
 function LinkWithTooltip({ id, children, href, tooltip }) {
     const [showTooltip,setShowTooltip] = useState(false);
@@ -32,9 +36,53 @@ const BaseNavigationBar = () => {
             
         </Container>);
     }
+
+    useEffect(() => {
+        $(document).ready(function(){
+            $(".nav-back").css("background" , "rgba(15,15,15,0.7)");
+            $(window).scroll(function(){
+                var scroll = $(window).scrollTop();
+                if (scroll <= 1000) {
+                    $(".nav-back").css("background" , "rgba(15,15,15,"+((scroll/1000)+0.7)+")");
+                } else {
+                    $(".nav-back").css("background" , "rgba(15,15,15,"+1+")");
+                }
+            })
+        })
+    }, [])
+
+    const getStartNavSection = () => {
+
+    
+    }
+    const getEndNavSection = () => {
+
+    }
+    const getNavItem = () => {
+
+    }
+
+    const getDestinationNav = () => {
+        let outputVar = ``;
+        for(let i=0;i<7;i++) {
+            outputVar += `
+            <div class="col-sm-12 col-lg-4 float-start mb-4">
+                                    <h6 class="font-weight-bold text-uppercase">
+                    </h6>
+                    <ul class="list-unstyled">`
+           for(let j=0;j<14;j++) {
+            outputVar +=  `<li class="nav-item"><a href="#/country/`+destinationList[i+j]+`"
+                                    class="nav-link nav-bar-item text-small pb-0">` + destinationList[i+j] +  `</a>
+                            </li>`
+           }     
+           outputVar += `</ul></div>`
+        }
+        return (<> <div className="pb-4" dangerouslySetInnerHTML={{__html:outputVar}}></div> </>);
+    }
+    
     return (
         <>
-            <Navbar fixed="top" key='md' expand={'md'} className="nav-back mb-3">
+            {/* <Navbar fixed="top" key='md' expand={'md'} className="nav-back mb-3">
                 <Container fluid>
                     <Navbar.Brand href="#home"><Image fluid={false} className="banner-image navbar-spacing" src={Constants.BASE}></Image></Navbar.Brand>
                     <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-md`} className="nav-bar-item" label="Expander"/>
@@ -60,7 +108,49 @@ const BaseNavigationBar = () => {
                     </Navbar.Offcanvas>
                 </Container>
 
-            </Navbar>
+            </Navbar> */}
+    
+        <nav className="navbar navbar-expand-lg fixed-top nav-back nav-back py-3 shadow-sm">
+            <div className="container-fluid">
+                <a href="#" className="navbar-brand font-weight-bold d-block"><Image fluid={false} className="banner-image" src={Constants.BASE}></Image></a>
+                <button className="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span className="navbar-toggler-icon"></span>
+                </button>
+                <div id="navbarSupportedContent" className="collapse navbar-collapse">
+                    <ul className="navbar-nav mx-auto">
+                    <li className="nav-item"><a href="#/home"
+                                className="nav-link nav-bar-item  font-weight-bold text-uppercase">Home</a>
+                        </li>
+                        <li className="nav-item nav-bar-item dropdown megamenu"><a id="megamneu" href="#"
+                                id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false"
+                                className="nav-link nav-bar-item  dropdown-toggle font-weight-bold text-uppercase dropdown-toggle">Destinations</a>
+                            <div aria-labelledby="dropdownMenuButton1"
+                                className="dropdown-menu no-back border-0 p-0 m-0">
+                                <div className="container mega-menu-container nav-back custom-nav-scroll">
+                                    <div className="row rounded-0 m-0 shadow-sm">
+                                    <div className="col-lg-12 col-xl-12">
+                                            {/* <div className="row"> */}
+                                                { getDestinationNav()}
+                                            {/* </div> */}
+                                    </div>      
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                       
+                        {/* <li className="nav-item"><a href=""
+                                className="nav-link nav-bar-item  font-weight-bold text-uppercase">Services</a>
+                        </li>
+                        <li className="nav-item"><a href=""
+                                className="nav-link nav-bar-item  font-weight-bold text-uppercase">Contact</a>
+                        </li> */}
+                    </ul>
+                </div>
+            </div>
+        </nav>
+       
         </>
     );
 }
