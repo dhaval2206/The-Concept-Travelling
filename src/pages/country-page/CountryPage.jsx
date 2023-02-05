@@ -24,18 +24,21 @@ const CountryPage = () => {
             } 
         }
     })
+    const imageSrc = COUNTRY_IMAGE_MAP[fetchCountry(params.countryName) ? fetchCountry(params.countryName).toUpperCase() : ""] ?? COUNTRY_IMAGE_MAP.ASIA
     
     return (
     <>
-        <Card fluid="true" className="country-image-container">
-            <Image className="country-back-image" fluid="true" src={COUNTRY_IMAGE_MAP[fetchCountry(params.countryName) ? fetchCountry(params.countryName).toUpperCase() : ""] ?? COUNTRY_IMAGE_MAP.ASIA}>
-            </Image>
-            <h2 className="country-image-caption stylish-font">{fetchCountry(params.countryName)}</h2>
-        </Card>
-        <Card fluid="true">
-            <Row className="d-flex justify-content-evenly">
-                <Col className="col-section" sm={12} md={12} lg={12} xl={12} xxl={12}>
-                    <div className="section-text destination-text">
+        <div className="cover-image" style={{background:`url('${imageSrc}') no-repeat center center fixed`}}>
+        </div>
+        <Card className="card-style flex-center">
+        <Row>
+            <Col className="flex-center" xs={24} sm={24} md={24} lg={24} xl={24} xxl={24}>
+                <h1 className="destination-header stylish-font">{fetchCountry(params.countryName)}</h1>
+            </Col>
+        </Row>
+            <Row>
+                <Col className="" xs={24} sm={24} md={24} lg={24} xl={24} xxl={24}>
+                    <div className="destination-text">
                     { CommonUtils.searchKeyValuesFromArrayUnderCaps(COUNTRY_CONSTANT,"DESTINATION",fetchCountry(params.countryName)).DESCRIPTION ? CommonUtils.searchKeyValuesFromArrayUnderCaps(COUNTRY_CONSTANT,"DESTINATION",fetchCountry(params.countryName)).DESCRIPTION.split("\n").map(item => (
                         item.trim().length>0 ?<h6><span className="destination-line">{item}</span></h6>:""
                     )

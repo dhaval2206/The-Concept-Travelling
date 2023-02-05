@@ -2,8 +2,7 @@
 @import '../home-page/home-page.scss';
 
 .country-back-image {
-  height: 500px !important;
-  width: 100%;
+  width: 50vw !important;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -28,10 +27,30 @@
 }
 .destination-text {
   white-space: pre-line;
-  padding: 25px;
-  line-height: 50px;
+  padding: 0px 30px 0px 30px;
+  font-size: larger;
+  color:$secondary-90;
 }
 
 .destination-line {
  
+}
+
+.cover-image {
+  height: 40vh;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+
+.destination-header { 
+  color:$primary;
+  font-size: x-large;
+  font-weight: 800;
+  margin: 0 !important;
+  margin-top: 15px !important;
+  
+  padding: 20px 30px 0px 30px;
+  
 }

@@ -1,13 +1,48 @@
 @import './../../index.scss';
+html, body {
+    min-height: 100%;
+}
 .custom-carousel {
-    height: 100vh;
+    height: auto;
     vertical-align: middle;
     margin: auto !important;
 }
-
+.base-carousel-style { 
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+}
+p {
+    padding: 0;
+    margin:0;
+}
+.carousel-outer-container {
+    width: 100% !important;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    -webkit-background-size: cover !important;
+    -moz-background-size: cover !important;
+    -o-background-size: cover !important;
+    background-size: cover !important;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.carousel-content {
+    background-color: $back-70;
+    width: fit-content;
+    height: fit-content;
+    padding: 50px;
+    text-align: center;
+}
+@media (min-width: 1120px), (min-height: 630px) {
+    body { background-size: auto; }
+}
 .custom-carousel-caption {
     background-color: $back-70;
-    padding: 5%;
+    // padding: 5%;
+    margin-top:0px;
     margin-bottom: 30vh;
 }
 .carousel-header {
@@ -37,14 +72,39 @@
 }
 .col-section {
     background-color: $default-30 !important;
-    padding: 30px;
-    margin-left: 0%;
+    margin:20px;
+    padding: 20px;
+    width: 100%;
 }
 .row-section {
     display: flex;
 }
 .even-row {
     background: $primary;
+    border: none;
+    outline: none;
+    border-radius: 0px;
+}
+.card-style { 
+    background: $back;
+    border: none;
+    width: 100%;
+    outline: none;
+    border-radius: 0px;   
+    padding: 0 !important;
+}
+.antd-card-body {
+    padding: 0 !important;
+}
+.ant-card .ant-card-body { 
+    padding: 0 !important;
+}
+
+.odd-row { 
+    background: $back;
+    border: none;
+    outline: none;
+    border-radius: 0px;
 }
 .image-container{
     border: 25px solid $default;
@@ -104,16 +164,7 @@
 .testimonial-carousel-item {
     width: 100%;
 }
-.footer-row {
-    background-color: $default;
-    color: $font;
-}
 
-.footer-list-item {
-    background : $default !important;
-    color: $font;
-    border: none;
-}
 .container-true {
     background: $back !important;
 }

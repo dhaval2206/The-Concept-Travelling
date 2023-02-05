@@ -7,11 +7,12 @@ import HomePage from './pages/home-page/HomePage'
 import {Route, Routes,Navigate, HashRouter } from 'react-router-dom';
 import CountryPage from './pages/country-page/CountryPage';
 import BaseNavigationBar from './components/BaseNavigationBar';
+import BaseFooter from './components/footer/BaseFooter';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <HashRouter basename='/'>
-      <BaseNavigationBar></BaseNavigationBar>
+      {/* <BaseNavigationBar></BaseNavigationBar> */}
       <Routes>
         <Route path='/country/:countryName' element={<CountryPage/>}></Route>
         <Route path='/country/' element={<CountryPage/>}></Route>
@@ -20,6 +21,7 @@ root.render(
         <Route path='/' element={<Navigate replace to={"/home"} />}></Route>
         <Route path='/*' element={<Navigate replace to={"/home"} />}></Route>
       </Routes>
+      <BaseFooter></BaseFooter>
     </HashRouter>
   </React.StrictMode>
 );

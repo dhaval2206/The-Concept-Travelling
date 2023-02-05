@@ -1,0 +1,36 @@
+@import './../../index.scss';
+.footer-row {
+    background-color: $back;
+    color: $font;
+}
+
+.footer-list-item {
+    background : $back !important;
+    color: $primary !important;
+    border: none;
+    padding:20px;
+}
+
+.li-style  {
+  background : $back !important;
+  color: $primary !important;
+  border: none;
+  padding:10px;
+}
+.li-header {
+  color: $font !important;
+  font-size: larger;
+}
+a {   
+  color: $primary !important;
+  text-decoration: none;
+}
+ul { 
+  padding: 0;
+  margin: 0 ;
+}
+.footer-image { 
+  width: 20vw !important;
+  margin-left: 10px;
+  filter: drop-shadow(0.5px 0.5px 3px $primary-60);
+}
