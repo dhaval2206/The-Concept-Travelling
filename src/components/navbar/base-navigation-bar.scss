@@ -299,3 +299,38 @@ ul {
   background: $secondary;
   border-radius: 10px;
 }
+
+
+
+
+
+
+.ant-drawer-body,
+.ant-drawer-content,
+.ant-drawer-header { 
+  background-color: $back;
+  display: flex;
+  font-size: x-large;
+}
+.ant-drawer-close {
+  float: right !important;
+  order: 2;
+}
+.anticon svg {
+  fill: $primary;
+  font-size: x-large;
+  float: right;
+}
+
+
+.ant-drawer-body::-webkit-scrollbar { 
+  width: 5px !important;
+}
+.ant-drawer-body::-webkit-scrollbar-thumb { 
+  background: $primary;
+  border-radius: 10px;
+}
+.ant-drawer-body::-webkit-scrollbar-track { 
+  background: $secondary;
+  border-radius: 10px;
+}

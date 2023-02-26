@@ -1,4 +1,4 @@
-import { Col, Menu, Row, Space } from "antd";
+import { Col,  Row } from "antd";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { CommonUtils } from "../CommonUtils";
@@ -10,7 +10,7 @@ const DestinationMenu = () => {
     const destinationSize = {
         xs:24, 
         sm:24,
-        md:6,
+        md:12,
         lg:4,
         xl:4,
         xxl:3
@@ -21,17 +21,15 @@ const DestinationMenu = () => {
 
     return <>
         <div className="destination-menu-container flex-center">
-                {/* <Menu items={destinationList}>
-                </Menu> */}
-                        <Row className="submenu-row">   
-                                { destinationList.map((item,index) => {
-                                        return (
-                                            <Col className="submenu-col" {...destinationSize}>
-                                                <Link to={`/country/${item}`}>{item}</Link>
-                                            </Col>
-                                        )
-                                    }) }
-                            </Row> 
+                <Row className="submenu-row">   
+                        { destinationList.map((item,index) => {
+                                return (
+                                    <Col className="submenu-col" {...destinationSize}>
+                                        <Link to={`/country/${item}`}>{item}</Link>
+                                    </Col>
+                                )
+                            }) }
+                    </Row> 
             
         </div>
     </>

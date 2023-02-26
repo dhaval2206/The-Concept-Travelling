@@ -1,26 +1,25 @@
-import React,{useEffect, useState} from "react";
+import React, { useState } from "react";
 import { Constants } from "../Constants";
 import './base-navigation-bar.scss'
-import { CommonUtils } from "../CommonUtils";
-import { COUNTRY_CONSTANT } from "../CountryConstants";
-import { Col, Image, Menu, Row } from "antd";
-import { EnvironmentFilled, EnvironmentOutlined, HomeFilled, HomeOutlined, MenuOutlined, PhoneFilled, PhoneOutlined, UserOutlined } from '@ant-design/icons';
+import { Col, Drawer, Image, Menu, Row } from "antd";
+//import {  EnvironmentOutlined, HomeOutlined, MenuOutlined, PhoneOutlined, UserOutlined } from '@ant-design/icons';
+import { MenuOutlined} from '@ant-design/icons';
 import { Link } from "react-router-dom";
 import DestinationMenu from "./DestinationMenu";
 
 
 const BaseNavigationBar = () => {
 
-   
+   const [openDrawer, setOpenDrawer] = useState(false);
 
     const webMenuItems = [
         {
-            icon :<HomeOutlined className="navbar-icon" />,
+            // icon :<HomeOutlined className="navbar-icon" />,
             label:<Link to={"/home"}>Home</Link>,
             key : "Home",
         },
         {
-            icon :<EnvironmentOutlined className="navbar-icon" />,
+            // icon :<EnvironmentOutlined className="navbar-icon" />,
             label : "Destinations",
             key : "Destinations",
             children : [
@@ -36,12 +35,12 @@ const BaseNavigationBar = () => {
             ]
         },
         {
-            icon :<PhoneOutlined className="navbar-icon" />,
+            // icon :<PhoneOutlined className="navbar-icon" />,
             label : "Contact Us",
             key : "ContactUs",
         },
         {
-            icon :<UserOutlined className="navbar-icon" />,
+            // icon :<UserOutlined className="navbar-icon" />,
             label : "About Us",
             key : "AboutUs",
         }  
@@ -61,10 +60,23 @@ const BaseNavigationBar = () => {
                         </Menu>
                     </Col>
                     <Col span={16} className="smallMenu">
-                        <MenuOutlined className={"smallMenu flex-right burger-icon"} /> 
+                        <MenuOutlined className={"smallMenu flex-right burger-icon"} onClick={e => {
+                            setOpenDrawer(true);
+                        }} /> 
                     </Col>
                 </Row>
             </div>
+            <Drawer open={openDrawer} onClose={e => {setOpenDrawer(false)}} width={"100vw"} 
+            title={<>
+            <Link to={`/home`}>
+                            <Image src={Constants.FIT} className={"main-logo"} preview={false}></Image>
+                        </Link>
+            </>}>
+                <Menu mode={"inline"} className="" theme="dark" items={webMenuItems} onClick={e => {
+                    setOpenDrawer(false);
+                }}>
+                        </Menu>
+            </Drawer>
         </>
     );
 }

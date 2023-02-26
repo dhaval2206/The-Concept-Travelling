@@ -33,8 +33,7 @@ export const CommonUtils = {
             let counter=0;
             if(key && key.length > 0) {
                 for (let obj of array) {
-                    if(counter % 15 == 0) { 
-                        console.log("group");
+                    if(counter % 15 === 0) { 
                         returnArray.push( 
                             {
                                 label:<Link to={"/country/"+obj[key].trim().toLowerCase().replaceAll(" ","-").toUpperCase()}>{obj[key].trim().toLowerCase().replaceAll(" ","-").toUpperCase()}</Link>,
@@ -43,7 +42,6 @@ export const CommonUtils = {
                             }
                         );
                     } else {
-                        console.log("no");
                         returnArray.push( 
                             {
                                 label:<Link to={"/country/"+obj[key].trim().toLowerCase().replaceAll(" ","-").toUpperCase()}>{obj[key].trim().toLowerCase().replaceAll(" ","-").toUpperCase()}</Link>,
