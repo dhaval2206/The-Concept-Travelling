@@ -82,8 +82,47 @@ body {
       monospace;
   }
   
+  .flex { 
+    display: flex;
+  }
   .flex-center {
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
   }
+  .flex-left {
+    display: flex !important;
+    align-items: flex-start !important;
+    justify-content: flex-start !important;
+  }
+  .flex-right {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
+  }
+  .flex-self-left {
+    display: flex !important;
+    align-items: flex-end !important;
+    justify-content: flex-end !important;
+    align-self: flex-start !important;
+  }
+.flex-self-center { 
+  display: flex !important;
+    justify-content: right !important;
+    align-self: center !important;
+}
+body::-webkit-scrollbar { 
+  width: 5px !important;
+}
+body::-webkit-scrollbar-thumb { 
+  background: $primary;
+  border-radius: 10px;
+}
+body::-webkit-scrollbar-track { 
+  background: $secondary;
+  border-radius: 10px;
+}
+*::selection {
+  background-color:$secondary-20 !important;
+  color:$primary-80 !important;
+}

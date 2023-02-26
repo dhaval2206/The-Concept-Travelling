@@ -1,4 +1,4 @@
-import { Card, Col, Image, Row } from "antd";
+import { Card, Col, Row } from "antd";
 import React, { useEffect } from "react";
 import { useParams,useNavigate } from "react-router";
 import { CommonUtils } from "../../components/CommonUtils";

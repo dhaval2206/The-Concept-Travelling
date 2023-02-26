@@ -1,0 +1,36 @@
+@import './../../index.scss';
+.destination-menu-container { 
+    height: 500px;
+    width: 80vw;
+}
+
+.li-style  {
+  background : red !important;
+  color: $primary !important;
+  border: none;
+  padding:10px;
+  text-overflow: ellipsis !important;
+}
+.li-header {
+  color: $font !important;
+  font-size: larger;
+}
+.ul-style{
+  display: flex;
+  justify-content: center;
+  word-wrap: break-word;
+  text-overflow: ellipsis !important;
+}
+a { 
+  text-overflow: ellipsis !important;
+}
+.submenu-row { 
+  display: flex;
+  justify-content: center;
+  height: 800px;
+  background-color: red !important;
+}
+.submenu-col { 
+  width: 100px;
+  background-color: red !important;
+}

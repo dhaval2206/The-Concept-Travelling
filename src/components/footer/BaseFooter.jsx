@@ -1,4 +1,4 @@
-import { Col, Image, List, Row } from "antd";
+import { Col, Image, Row } from "antd";
 import React from "react";
 import { Link } from "react-router-dom";
 import { CommonUtils } from "../CommonUtils";
@@ -47,7 +47,7 @@ const BaseFooter = () => {
 
         <>
         <hr />
-        <Image className="footer-image" src={Constants.BASE}></Image>
+        <Image className="footer-image" preview={false} src={Constants.BASE}></Image>
                 <Row>
                     <Col {...usefulFooterSize}>
                     <ul className="">

@@ -1,0 +1,301 @@
+@import './../../index.scss';
+.nav-back {
+    // background-color: $back-80 !important;
+}
+.banner-image {
+    height: auto;
+    width: 200px;   
+}
+
+.nav-bar-item {
+    color: $primary !important;
+}
+
+.nav-bar-item a {
+    color: $primary !important;
+    text-decoration: none;
+}
+li {
+    list-style-type: none;
+}
+.nav-item {
+    width: auto !important;
+}
+.nav-bar-item.nav-link.active{
+    color : $font !important;
+}
+.nav-bar-item:hover {
+    color: $secondary !important;
+}
+.navbar-toggler {
+    border-color: $primary-50 !important;
+}
+.navbar-toggler-icon {
+   background-image:url("data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 30 30%27%3e%3cpath stroke=%27rgba(215, 181, 109,0.5)%27 stroke-linecap=%27round%27 stroke-miterlimit=%2710%27 stroke-width=%272%27 d=%27M4 7h22M4 15h22M4 23h22%27/%3e%3c/svg%3e") !important;
+}
+.navbar-spacing {
+    margin-left: 25% ;
+}
+.offcanvas-body-style {
+    background-color: $back !important;
+}
+.offcanvas-header {
+    background-color: $back !important;
+}
+.offcanvas-header .btn-close {
+    color: $primary;
+}
+.btn-close 
+{
+    background : transparent url("data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 16 16%27 fill=%27rgba(215, 181, 109,0.5)%27%3e%3cpath d=%27M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z%27/%3e%3c/svg%3e") center/1em auto no-repeat !important;
+}
+.offcanvas.offcanvas-start {
+    background-color: transparent !important;
+}
+.nav-accordion-body {
+    position: relative;
+    z-index: 999;
+    background: transparent !important;
+}
+.nav-accordion-button {
+    background : transparent !important;
+}
+
+.show-content {
+    display: block;
+}
+.hide-content {
+    display: none;
+}
+.floating-nav {
+    position: absolute;
+    top: 450px;
+    left: 0;
+    color: $font;
+    background:transparent !important;
+}
+.footer-list-item {
+    color: $font;
+    border: none;
+}
+.megamenu {
+    position: static;
+  }
+  
+.megamenu .dropdown-menu {
+    // background: none;
+    // border: none;
+    width: 100%;
+  }
+  .text-uppercase {
+    letter-spacing: 0.08em;
+  }
+  .megaimaga
+  {
+    background: center center url("https://therichpost.com/wp-content/uploads/2021/11/mega.png")no-repeat; background-size: cover;
+  }
+  .mega-menu-container {
+    width: 80vh !important;
+    overflow: auto;
+  }
+
+  .black-back {
+    background: $back !important;
+  }
+
+  .black-back-70 {
+    background: $back !important;
+  }
+  .no-back {
+    background: transparent !important;
+  }
+
+  .custom-nav-scroll{
+    overflow: auto;
+    height: 500px;
+  }
+
+
+
+  .custom-nav-scroll::-webkit-scrollbar {
+    width: 1em;
+  }
+   
+  .custom-nav-scroll::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  }
+   
+  .custom-nav-scroll::-webkit-scrollbar-thumb {
+    background-color: $primary-70;
+    outline: 1px solid $primary-70;
+  }
+
+  .base-navbar { 
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    z-index: 9999;
+    background:transparent !important;
+    color : $font;
+  }
+
+  .base-navbar:hover { 
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+    background:$back-80;
+    color : $font !important;
+  }
+
+ .navbar-item { 
+  color:$secondary;
+  font-size: large;
+ } 
+ .navbar-item:hover { 
+  color:$primary !important;
+  border: none !important;
+ }
+ .navbar-item::after { 
+  border: none !important;
+ }
+ .ant-menu-item-selected { 
+  color: $primary !important;
+ }
+ .navbar-icon { 
+  margin-right: 10px;
+  font-size:large !important;
+ }
+ .main-logo { 
+  height: max-content !important;
+  width: 200px !important;
+  padding: 20px !important;
+  margin: 0 !important;
+  justify-content: flex-start;
+  align-items: flex-start !important;
+  align-self: flex-start;
+ }
+ .nav-card { 
+  background: $back-80 !important;
+  border: none !important;
+  height: 100px !important;
+  width: 100% !important;
+  outline: none !important;
+  border-radius: 0px !important;   
+  padding: 0 !important;
+  position:fixed;
+  z-index: 999;
+ }
+
+ .smallMenu { 
+  color:$secondary;
+  font-size: large;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  justify-self: center;
+ }
+ .burger-icon { 
+  font-size:larger !important;
+ }
+ .burger-icon:hover { 
+  color:$primary;
+ }
+.ant-menu-submenu-title { 
+  color:$secondary !important;
+  font-size: large;
+}
+.ant-menu-submenu-title:hover::before { 
+  border: none !important;
+}
+.ant-menu-submenu-title:hover { 
+  color:$primary !important;
+}
+.ant-menu-horizontal > .ant-menu-item::after,
+.ant-menu-horizontal > .ant-menu-submenu::after 
+{
+  border-bottom: none !important;
+  transition: none !important;
+}
+.ant-menu-item-selected { 
+  color:red !important;
+}
+.ant-menu-item { 
+  color:$secondary !important;
+  background-color: transparent !important;
+}
+.ant-menu-item:hover { 
+  color:$primary !important;
+}
+.ant-menu-item-selected { 
+  color:$primary !important;
+}
+.ant-menu-submenu-active { 
+  color:red !important;
+}
+.ant-menu-sub { 
+  background-color: red;
+}
+ul { 
+  background-color: transparent !important;
+}
+.ant-menu-item-only-child { 
+  background-color: transparent !important;
+}
+.ant-menu-vertical { 
+  background-color: transparent !important;
+}
+ @media (max-width:800px) {
+  .bigMenu { 
+    display: none !important;
+  }
+ }
+ @media (min-width:800px) {
+  .smallMenu { 
+    display: none !important;
+  }
+ }
+ .ant-menu > .ant-menu-item:hover,
+.ant-menu > .ant-menu-submenu:hover,
+.ant-menu > .ant-menu-item-active,
+.ant-menu> .ant-menu-submenu-active,
+.ant-menu > .ant-menu-item-open,
+.ant-menu> .ant-menu-submenu-open,
+.ant-menu > .ant-menu-item-selected,
+.ant-menu > .ant-menu-submenu-selected {
+  // color: red !important;
+  background-color: transparent !important;
+}
+
+.ant-menu-vertical > .ant-menu-item::after,
+.ant-menu-vertical > .ant-menu-submenu::after 
+{
+  border-bottom: none !important;
+  transition: none !important;
+  background-color: transparent !important;
+}
+
+.ant-menu-submenu-popup { 
+  background-color: $back-90 !important;
+  width: 90vw;
+  align-items: center;
+}
+
+.ant-menu-submenu-popup::-webkit-scrollbar { 
+  width: 2px !important;
+}
+
+.ant-menu-vertical::-webkit-scrollbar { 
+  width: 5px !important;
+}
+.ant-menu-vertical::-webkit-scrollbar-thumb { 
+  background: $primary;
+  border-radius: 10px;
+}
+.ant-menu-vertical::-webkit-scrollbar-track { 
+  background: $secondary;
+  border-radius: 10px;
+}

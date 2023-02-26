@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export const CommonUtils = {
     getKeyValuesFromArray:(array,key) => {
         if(array && array.length > 0) {
@@ -18,6 +20,38 @@ export const CommonUtils = {
             if(key && key.length > 0) {
                 for (let obj of array) {
                     returnArray.push(obj[key].trim().toLowerCase().replaceAll(" ","-").toUpperCase());
+                }
+            }
+            return returnArray;
+        } else {
+            return [];
+        }
+    },
+    getMenuItemFromArray:(array,key) => {
+        if(array && array.length > 0) {
+            let returnArray = [];
+            let counter=0;
+            if(key && key.length > 0) {
+                for (let obj of array) {
+                    if(counter % 15 == 0) { 
+                        console.log("group");
+                        returnArray.push( 
+                            {
+                                label:<Link to={"/country/"+obj[key].trim().toLowerCase().replaceAll(" ","-").toUpperCase()}>{obj[key].trim().toLowerCase().replaceAll(" ","-").toUpperCase()}</Link>,
+                                key:obj[key].trim().toLowerCase().replaceAll(" ","-").toUpperCase(),
+                                type:"group"
+                            }
+                        );
+                    } else {
+                        console.log("no");
+                        returnArray.push( 
+                            {
+                                label:<Link to={"/country/"+obj[key].trim().toLowerCase().replaceAll(" ","-").toUpperCase()}>{obj[key].trim().toLowerCase().replaceAll(" ","-").toUpperCase()}</Link>,
+                                key:obj[key].trim().toLowerCase().replaceAll(" ","-").toUpperCase(),
+                            }
+                        );
+                    }
+                    counter++;
                 }
             }
             return returnArray;

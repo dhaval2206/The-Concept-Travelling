@@ -4,6 +4,7 @@
   "homepage": "https://dhaval2206.github.io/The-Concept-Travelling",
   "private": true,
   "dependencies": {
+    "@ant-design/icons": "^5.0.1",
     "@sefailyasoz/react-carousel": "^1.1.1",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",

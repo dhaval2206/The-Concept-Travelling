@@ -1,4 +1,4 @@
-import { Card, Carousel, Col, Image, List, Row } from "antd";
+import { Card, Carousel, Col, Image, Row } from "antd";
 import React from "react";
 import { Constants, COUNTRY_IMAGE_MAP } from "../../components/Constants";
 import './home-page.scss'

@@ -2,17 +2,16 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.scss';
 import reportWebVitals from './reportWebVitals';
-import BaseLayout from './components/BaseLayout';
 import HomePage from './pages/home-page/HomePage'
 import {Route, Routes,Navigate, HashRouter } from 'react-router-dom';
 import CountryPage from './pages/country-page/CountryPage';
-import BaseNavigationBar from './components/BaseNavigationBar';
+import BaseNavigationBar from './components/navbar/BaseNavigationBar';
 import BaseFooter from './components/footer/BaseFooter';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <HashRouter basename='/'>
-      {/* <BaseNavigationBar></BaseNavigationBar> */}
+      <BaseNavigationBar></BaseNavigationBar>
       <Routes>
         <Route path='/country/:countryName' element={<CountryPage/>}></Route>
         <Route path='/country/' element={<CountryPage/>}></Route>
