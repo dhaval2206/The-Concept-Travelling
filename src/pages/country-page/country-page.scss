@@ -26,10 +26,9 @@
     align-self: flex-end;
 }
 .destination-text {
-  white-space: pre-line;
-  padding: 0px 30px 0px 30px;
-  font-size: larger;
+  padding: 0px 100px 50px 100px;
   color:$secondary-90;
+  font-size: xxx-large;
 }
 
 .destination-line {
@@ -40,17 +39,18 @@
   height: 40vh;
   width: 100%;
   padding: 0;
+  // clip-path:  polygon(0% 15%, 0 0, 15% 0%, 85% 0%, 100% 0, 100% 15%, 100% 100%, 84% 100%, 71% 81%, 29% 81%, 16% 100%, 0 100%);
   margin: 0;
 }
 
 
 .destination-header { 
   color:$primary;
-  font-size: x-large;
+  font-size: xxx-large;
   font-weight: 800;
   margin: 0 !important;
   margin-top: 15px !important;
-  
+  text-transform: capitalize !important;
   padding: 20px 30px 0px 30px;
   
 }

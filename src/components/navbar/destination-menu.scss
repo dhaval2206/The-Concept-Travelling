@@ -1,7 +1,7 @@
 @import './../../index.scss';
 .destination-menu-container { 
     height: 500px;
-    width: 80vw;
+    width: 60vw;
 }
 
 .li-style  {
@@ -26,11 +26,51 @@ a {
 }
 .submenu-row { 
   display: flex;
-  justify-content: center;
+  justify-content: left;
   height: 800px;
-  background-color: red !important;
+  // background-color: red !important;
 }
 .submenu-col { 
   width: 100px;
+  background-color: red !important;
+}
+.submenu-col-parent { 
+  width: 100px;
+  background: red !important;
+}
+.submenu-col-child a { 
+  width: 100px;
+  background: red !important;
+}
+.ant-spin-container {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.submenu-list
+{
+  align-items: flex-start;
+}
+
+.ant-menu .ant-menu-sub .ant-menu-vertical {
+  display: flex !important;
+  justify-content: flex-start !important;
+
+  .ant-menu-item,
+  .ant-menu-item-selected,
+  .ant-menu.item-only-child { 
+    display: flex !important;
+    justify-content: flex-start !important;
+    background-color: royalblue !important;
+  }
+}
+
+.ant-list {
+  align-self: flex-start;
+}
+
+.ant-list-item .list-item { 
   background-color: red !important;
 }
