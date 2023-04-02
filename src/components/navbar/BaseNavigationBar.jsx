@@ -29,7 +29,8 @@ const BaseNavigationBar = () => {
                     style : {
                         height:"fit-content",
                         display:"flex",
-                        justifyContent:"center"
+                        justifyContent:"center",
+                        width:'100%'
                     }
                 }
             ]

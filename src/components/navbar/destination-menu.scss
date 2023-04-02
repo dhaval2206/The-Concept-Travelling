@@ -1,7 +1,7 @@
 @import './../../index.scss';
 .destination-menu-container { 
     height: 500px;
-    width: 60vw;
+    width: 50vw;
 }
 
 .li-style  {
@@ -58,13 +58,33 @@ a {
   display: flex !important;
   justify-content: flex-start !important;
 
-  .ant-menu-item,
-  .ant-menu-item-selected,
+  .ant-menu-item
+  .ant-menu-item-selected
+  .ant-menu-item-active
   .ant-menu.item-only-child { 
     display: flex !important;
     justify-content: flex-start !important;
     background-color: royalblue !important;
   }
+}
+.ant-menu-submenu-popup {
+  background-color: red;
+  .ant-menu-item
+  .ant-menu-item-selected
+  .ant-menu-item-active
+  .ant-menu.item-only-child { 
+    display: flex !important;
+    justify-content: flex-start !important;
+    background-color: royalblue !important;
+  }
+}
+.ant-menu-item
+  .ant-menu-item-selected
+  .ant-menu-item-active
+  .ant-menu.item-only-child { 
+  display: flex !important;
+  justify-content: flex-start !important;
+  background-color: royalblue !important;
 }
 
 .ant-list {
@@ -73,4 +93,34 @@ a {
 
 .ant-list-item .list-item { 
   background-color: red !important;
+}
+
+.ul-header {
+  color:$font !important;
+}
+
+.dest-col {
+  padding: 0px !important;
+  margin: 0px !important;
+}
+.dest-row {
+  padding:0px 0px 0px 0px !important;
+  margin-right: 10px !important;
+  height: fit-content !important;
+  width: fit-content !important;
+}
+.head-col {
+  padding:0px 0px 0px 0px !important;
+  margin: 0 !important;
+  height: fit-content !important;
+  width: fit-content !important;
+}
+.ant-col { 
+  padding : 0px !important;
+  margin: 0px !important;
+  height:fit-content !important;
+  width: fit-content !important;
+}
+a::before {
+  padding: 0% !important;
 }
